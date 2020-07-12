@@ -33,20 +33,44 @@ export default function Footer() {
   };
 
   return (
-    <div>
-      <BottomNavigation>
-        <BottomNavigationAction
-          label="Open Modal"
-          value="recents"
-          onClick={handleOpen}
-          icon={<RestoreIcon />}
-        />
-      </BottomNavigation>
+    <div className="container mt-4">
+      <div className="row">
+        <div className="col-4">
+          <h3 className="text-center">footer column 1</h3>
+          <BottomNavigation>
+            <BottomNavigationAction
+              label="Open Modal"
+              value="recents"
+              onClick={handleOpen}
+              icon={<RestoreIcon />}
+            />
+          </BottomNavigation>
+        </div>
+        <div className="col-4">
+          <h3 className="text-center">footer column 2</h3>
+          <BottomNavigation>
+            <BottomNavigationAction
+              label="Open Modal"
+              value="recents"
+              onClick={handleOpen}
+              icon={<RestoreIcon />}
+            />
+          </BottomNavigation>
+        </div>
+        <div className="col-4">
+          <h3 className="text-center">footer column 3</h3>
+          <BottomNavigation>
+            <BottomNavigationAction
+              label="Open Modal"
+              value="recents"
+              onClick={handleOpen}
+              icon={<RestoreIcon />}
+            />
+          </BottomNavigation>
+        </div>
+      </div>
 
-      {/* <Botton type="button" onClick={handleOpen}>
-        Open Modal
-      </Botton> */}
-      <Modal
+      {/* <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         className={classes.modal}
@@ -64,7 +88,7 @@ export default function Footer() {
             <p id="modal-description">My Description</p>
           </div>
         </Fade>
-      </Modal>
+      </Modal> */}
     </div>
   );
 }
