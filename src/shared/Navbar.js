@@ -15,6 +15,7 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import PostAddIcon from "@material-ui/icons/PostAdd";
 import { Link } from "react-router-dom";
+import ContactSupportIcon from "@material-ui/icons/ContactSupport";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -213,7 +214,7 @@ export default function PrimarySearchAppBar() {
                 classes={{ label: classes.iconButton }}
               >
                 <Badge color="secondary">
-                  <PostAddIcon />
+                  <ContactSupportIcon />
                 </Badge>
                 <div style={{ fontSize: "small" }}>Contact Us</div>
               </IconButton>
