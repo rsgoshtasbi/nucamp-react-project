@@ -1,0 +1,11 @@
+.filterMenu {
+  border: 2px solid black;
+}
+
+.filterMenuSubmit {
+  margin-left: "1rem";
+}
+
+.filterMenuTitle {
+  border-bottom: 2px solid black;
+}

@@ -3,8 +3,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
 import RestoreIcon from "@material-ui/icons/Restore";
+import PhoneIcon from "@material-ui/icons/Phone";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import EmailIcon from "@material-ui/icons/Email";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -22,73 +25,126 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Footer() {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
+  const [phoneOpen, setPhoneOpen] = React.useState(false);
+  const [emailOpen, setEmailOpen] = React.useState(false);
+  const [socialOpen, setSocialOpen] = React.useState(false);
 
-  const handleOpen = () => {
-    setOpen(true);
+  const handlePhoneOpen = () => {
+    setPhoneOpen(true);
   };
-
-  const handleClose = () => {
-    setOpen(false);
+  const handlePhoneClose = () => {
+    setPhoneOpen(false);
+  };
+  const handleEmailOpen = () => {
+    setEmailOpen(true);
+  };
+  const handleEmailClose = () => {
+    setEmailOpen(false);
+  };
+  const handleSocialOpen = () => {
+    setSocialOpen(true);
+  };
+  const handleSocialClose = () => {
+    setSocialOpen(false);
   };
 
   return (
     <div className="container mt-4">
       <div className="row">
         <div className="col-4">
-          <h3 className="text-center">footer column 1</h3>
+          <h3 className="text-center">Phone Number</h3>
           <BottomNavigation>
             <BottomNavigationAction
               label="Open Modal"
               value="recents"
-              onClick={handleOpen}
-              icon={<RestoreIcon />}
+              onClick={handlePhoneOpen}
+              icon={<PhoneIcon />}
             />
           </BottomNavigation>
         </div>
         <div className="col-4">
-          <h3 className="text-center">footer column 2</h3>
+          <h3 className="text-center">Email</h3>
           <BottomNavigation>
             <BottomNavigationAction
               label="Open Modal"
               value="recents"
-              onClick={handleOpen}
-              icon={<RestoreIcon />}
+              onClick={handleEmailOpen}
+              icon={<EmailIcon />}
             />
           </BottomNavigation>
         </div>
         <div className="col-4">
-          <h3 className="text-center">footer column 3</h3>
+          <h3 className="text-center">Social</h3>
           <BottomNavigation>
             <BottomNavigationAction
               label="Open Modal"
               value="recents"
-              onClick={handleOpen}
-              icon={<RestoreIcon />}
+              onClick={handleSocialOpen}
+              icon={<InstagramIcon />}
             />
           </BottomNavigation>
         </div>
       </div>
 
-      {/* <Modal
+      {/* Phone Number Modal */}
+      <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         className={classes.modal}
-        open={open}
-        onClose={handleClose}
+        open={phoneOpen}
+        onClose={handlePhoneClose}
         closeAfterTransition
         BackdropComponent={Backdrop}
         BackdropProps={{
           timeout: 500,
         }}
       >
-        <Fade in={open}>
+        <Fade in={phoneOpen}>
           <div className={classes.paper}>
-            <h2 id="modal-title">My Title</h2>
-            <p id="modal-description">My Description</p>
+            <h2 id="modal-title">1-206-555-1234</h2>
           </div>
         </Fade>
-      </Modal> */}
+      </Modal>
+
+      {/* Email Modal */}
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={emailOpen}
+        onClose={handleEmailClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={emailOpen}>
+          <div className={classes.paper}>
+            <h2 id="modal-title">help@saveengineers.com</h2>
+          </div>
+        </Fade>
+      </Modal>
+
+      {/* Social Media */}
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        open={socialOpen}
+        onClose={handleSocialClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={socialOpen}>
+          <div className={classes.paper}>
+            <h2 id="modal-title">@laidoffengineers</h2>
+          </div>
+        </Fade>
+      </Modal>
     </div>
   );
 }
