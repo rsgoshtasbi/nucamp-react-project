@@ -1,83 +1,168 @@
 export const MEMBERS = [
-    {
-        id: 0,
-        name: "Nate Santiago",
-        image: "/assets/images/nate_santiago.jpg",
-        title: "Software Engineer",
-        location: "Irvine, CA",
-        experience: "5",
-        company: "Facebook"
+  {
+    id: 0,
+    name: "Nate Santiago",
+    image: "../assets/images/nate_santiago.jpg",
+    title: "Software Engineer",
+    skills: {
+      html: 1,
+      css: 4,
     },
-    {
-        id: 1,
-        name: "Judah Burnett",
-        image: "/assets/images/judah_brunett.jpg",
-        title: "Full Stack Devlope",
-        location: "Plano, TX",
-        experience: "9",
-        company: "Facebook"
+    location: "Irvine, CA",
+    experience: "5",
+    company: "Facebook",
+    email: "n.santiago@gmail.com",
+    social: {
+      linkedin: "https://linkedin.com",
+      facebook: "https://facebook.com",
+      twitter: "https://twitter.com",
+      instagram: "https://instagram.com",
     },
-    {
-        id: 2,
-        name: "Madelyn Iles",
-        image: "/assets/images/madelyn_iles.jpg",
-        title: "Front End Devloper",
-        location: "San Jose, CA",
-        experience: "3",
-        company: "Facebook"
+    about:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor eu augue ut lectus arcu. Amet nisl suscipit adipiscing bibendum. In ante metus dictum at. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Commodo elit at imperdiet dui accumsan. Fermentum posuere urna nec tincidunt praesent semper feugiat. Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo. Vestibulum lectus mauris ultrices eros in cursus turpis. Ornare arcu odio ut sem nulla pharetra. Vitae tortor condimentum lacinia quis.",
+  },
+  {
+    id: 1,
+    name: "Judah Burnett",
+    image: "/assets/images/judah_brunett.jpg",
+    title: "Full Stack Devloper",
+    location: "Plano, TX",
+    experience: "9",
+    company: "Facebook",
+    email: "j.burnett@gmail.com",
+    social: {
+      linkedin: "https://linkedin.com",
+      facebook: "https://facebook.com",
+      twitter: "https://twitter.com",
+      instagram: "https://instagram.com",
     },
-    {
-        id: 3,
-        name: "Clyde Meyers",
-        image: "/assets/images/clyde_myers.jpg",
-        title: "UI Designer",
-        location: "Clevland, OH",
-        experience: "2",
-        company: "Apple"
+    about:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor eu augue ut lectus arcu. Amet nisl suscipit adipiscing bibendum. In ante metus dictum at. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Commodo elit at imperdiet dui accumsan. Fermentum posuere urna nec tincidunt praesent semper feugiat. Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo. Vestibulum lectus mauris ultrices eros in cursus turpis. Ornare arcu odio ut sem nulla pharetra. Vitae tortor condimentum lacinia quis.",
+  },
+  {
+    id: 2,
+    name: "Madelyn Iles",
+    image: "/assets/images/madelyn_iles.jpg",
+    title: "Front End Devloper",
+    location: "San Jose, CA",
+    experience: "3",
+    company: "Facebook",
+    email: "m.iles@gmail.com",
+    social: {
+      linkedin: "https://linkedin.com",
+      facebook: "https://facebook.com",
+      twitter: "https://twitter.com",
+      instagram: "https://instagram.com",
     },
-    {
-        id: 4,
-        name: "Nafeesa Salt",
-        image: "/assets/images/nafeesa_salt.jpg",
-        title: "Web Developer",
-        location: "Madison, WI",
-        experience: "12",
-        company: "Apple"
+    about:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor eu augue ut lectus arcu. Amet nisl suscipit adipiscing bibendum. In ante metus dictum at. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Commodo elit at imperdiet dui accumsan. Fermentum posuere urna nec tincidunt praesent semper feugiat. Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo. Vestibulum lectus mauris ultrices eros in cursus turpis. Ornare arcu odio ut sem nulla pharetra. Vitae tortor condimentum lacinia quis.",
+  },
+  {
+    id: 3,
+    name: "Clyde Meyers",
+    image: "/assets/images/clyde_myers.jpg",
+    title: "UI Designer",
+    location: "Clevland, OH",
+    experience: "2",
+    company: "Apple",
+    email: "c.meyers@gmail.com",
+    social: {
+      linkedin: "https://linkedin.com",
+      facebook: "https://facebook.com",
+      twitter: "https://twitter.com",
+      instagram: "https://instagram.com",
     },
-    {
-        id: 5,
-        name: "Hal Greenaway",
-        image: "/assets/images/hal_greenway.jpg",
-        title: "Full Stack Developer",
-        location: "Philadelphia, PA",
-        experience: "8",
-        company: "Apple"
+    about:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor eu augue ut lectus arcu. Amet nisl suscipit adipiscing bibendum. In ante metus dictum at. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Commodo elit at imperdiet dui accumsan. Fermentum posuere urna nec tincidunt praesent semper feugiat. Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo. Vestibulum lectus mauris ultrices eros in cursus turpis. Ornare arcu odio ut sem nulla pharetra. Vitae tortor condimentum lacinia quis.",
+  },
+  {
+    id: 4,
+    name: "Nafeesa Salt",
+    image: "/assets/images/nafeesa_salt.jpg",
+    title: "Web Developer",
+    location: "Madison, WI",
+    experience: "12",
+    company: "Apple",
+    email: "n.salt@gmail.com",
+    social: {
+      linkedin: "https://linkedin.com",
+      facebook: "https://facebook.com",
+      twitter: "https://twitter.com",
+      instagram: "https://instagram.com",
     },
-    {
-        id: 6,
-        name: "Colette Christie",
-        image: "/assets/images/colette_christie.jpg",
-        title: "UI/UX Designer",
-        location: "Los Angeles, CA",
-        experience: "6",
-        company: "Amazon"
+    about:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor eu augue ut lectus arcu. Amet nisl suscipit adipiscing bibendum. In ante metus dictum at. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Commodo elit at imperdiet dui accumsan. Fermentum posuere urna nec tincidunt praesent semper feugiat. Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo. Vestibulum lectus mauris ultrices eros in cursus turpis. Ornare arcu odio ut sem nulla pharetra. Vitae tortor condimentum lacinia quis.",
+  },
+  {
+    id: 5,
+    name: "Hal Greenaway",
+    image: "/assets/images/hal_greenway.jpg",
+    title: "Full Stack Developer",
+    location: "Philadelphia, PA",
+    experience: "8",
+    company: "Apple",
+    email: "h.greenway@gmail.com",
+    social: {
+      linkedin: "https://linkedin.com",
+      facebook: "https://facebook.com",
+      twitter: "https://twitter.com",
+      instagram: "https://instagram.com",
     },
-    {
-        id: 7,
-        name: "Aaisha Yang",
-        image: "/assets/images/aaisha_yanf",
-        title: "Web Designer",
-        location: "Minneapolis, MN",
-        experience: "2",
-        company: "Amazon"
+    about:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor eu augue ut lectus arcu. Amet nisl suscipit adipiscing bibendum. In ante metus dictum at. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Commodo elit at imperdiet dui accumsan. Fermentum posuere urna nec tincidunt praesent semper feugiat. Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo. Vestibulum lectus mauris ultrices eros in cursus turpis. Ornare arcu odio ut sem nulla pharetra. Vitae tortor condimentum lacinia quis.",
+  },
+  {
+    id: 6,
+    name: "Colette Christie",
+    image: "/assets/images/colette_christie.jpg",
+    title: "UI/UX Designer",
+    location: "Los Angeles, CA",
+    experience: "6",
+    company: "Amazon",
+    email: "c.christie@gmail.com",
+    social: {
+      linkedin: "https://linkedin.com",
+      facebook: "https://facebook.com",
+      twitter: "https://twitter.com",
+      instagram: "https://instagram.com",
     },
-    {
-        id: 8,
-        name: "Terrell Harris",
-        image: "/assets/images/terrell_harris.jpg",
-        title: "Front End Developer",
-        location: "Laredo, TX",
-        experience: "11",
-        company: "Amazon"
+    about:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor eu augue ut lectus arcu. Amet nisl suscipit adipiscing bibendum. In ante metus dictum at. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Commodo elit at imperdiet dui accumsan. Fermentum posuere urna nec tincidunt praesent semper feugiat. Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo. Vestibulum lectus mauris ultrices eros in cursus turpis. Ornare arcu odio ut sem nulla pharetra. Vitae tortor condimentum lacinia quis.",
+  },
+  {
+    id: 7,
+    name: "Aaisha Yang",
+    image: "/assets/images/aaisha_yanf",
+    title: "Web Designer",
+    location: "Minneapolis, MN",
+    experience: "2",
+    company: "Amazon",
+    email: "a.yang@gmail.com",
+    social: {
+      linkedin: "https://linkedin.com",
+      facebook: "https://facebook.com",
+      twitter: "https://twitter.com",
+      instagram: "https://instagram.com",
     },
-]
+    about:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor eu augue ut lectus arcu. Amet nisl suscipit adipiscing bibendum. In ante metus dictum at. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Commodo elit at imperdiet dui accumsan. Fermentum posuere urna nec tincidunt praesent semper feugiat. Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo. Vestibulum lectus mauris ultrices eros in cursus turpis. Ornare arcu odio ut sem nulla pharetra. Vitae tortor condimentum lacinia quis.",
+  },
+  {
+    id: 8,
+    name: "Terrell Harris",
+    image: "/assets/images/terrell_harris.jpg",
+    title: "Front End Developer",
+    location: "Laredo, TX",
+    experience: "11",
+    company: "Amazon",
+    email: "t.harris@gmail.com",
+    social: {
+      linkedin: "https://linkedin.com",
+      facebook: "https://facebook.com",
+      twitter: "https://twitter.com",
+      instagram: "https://instagram.com",
+    },
+    about:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Auctor eu augue ut lectus arcu. Amet nisl suscipit adipiscing bibendum. In ante metus dictum at. Id velit ut tortor pretium viverra suspendisse potenti nullam ac. Commodo elit at imperdiet dui accumsan. Fermentum posuere urna nec tincidunt praesent semper feugiat. Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo. Vestibulum lectus mauris ultrices eros in cursus turpis. Ornare arcu odio ut sem nulla pharetra. Vitae tortor condimentum lacinia quis.",
+  },
+];

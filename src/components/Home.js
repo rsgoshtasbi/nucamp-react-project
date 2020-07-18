@@ -21,7 +21,7 @@ export default class Home extends Component {
             <h1>this will be the menu column</h1>
           </div>
           <div className="col-md">
-            <SearchResults member={this.state.members.filter((member) => member)} />
+            <SearchResults member={this.state.members} />
           </div>
         </div>
       </div>

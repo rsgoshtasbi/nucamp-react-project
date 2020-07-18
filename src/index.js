@@ -9,6 +9,8 @@ import NotFoundPage from "./shared/NotFoundPage";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Signup from "./components/Signup";
+import 'font-awesome/css/font-awesome.css';
+import 'bootstrap-social/bootstrap-social.css';
 
 const routing = (
   <Router>
