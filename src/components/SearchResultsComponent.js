@@ -1,43 +1,43 @@
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
 import Card from "react-bootstrap/Card";
-import MemberModal from './MemberModalComponent';
+import MemberModal from "./MemberModalComponent";
+import Table from "react-bootstrap/Table";
 
-function RenderMemberData({ props, member }) {
+function RenderMemberData({ member }) {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="table-responsive">
-          <table className="table">
-            <thead>
-              <tr>
-                <th scope="col-3" className="text-center">
-                  Name
-                </th>
-                <th scope="col-3" className="text-center">
-                  Title
-                </th>
-                <th scope="col-3" className="text-center">
-                  Location
-                </th>
-                <th scope="col-3" className="text-center">
-                  Years Experience
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td className="text-center">{member.name}</td>
-                <td className="text-center">{member.title}</td>
-                <td className="text-center">{member.location}</td>
-                <td className="text-center">{member.experience}</td>
-                <td className="text-center"><MemberModal member={member} /></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+    
+        <Table responsive hover borderless>
+          <thead>
+            <tr>
+              <th className="text-center">
+                Name
+              </th>
+              <th className="text-center">
+                Title
+              </th>
+              <th className="text-center">
+                Location
+              </th>
+              <th className="text-center">
+                Years Experience
+              </th>
+              <th> </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="text-center">{member.name}</td>
+              <td className="text-center">{member.title}</td>
+              <td className="text-center">{member.location}</td>
+              <td className="text-center">{member.experience}</td>
+              <td className="text-center">
+                <MemberModal member={member} />
+              </td>
+            </tr>
+          </tbody>
+        </Table>
+     
   );
 }
 

@@ -2,7 +2,7 @@ export const MEMBERS = [
   {
     id: 0,
     name: "Nate Santiago",
-    image: "../assets/images/nate_santiago.jpg",
+    image: "/assets/images/nate_santiago.jpg",
     title: "Software Engineer",
     skills: {
       html: 1,
@@ -95,10 +95,10 @@ export const MEMBERS = [
   },
   {
     id: 5,
-    name: "Hal Greenaway",
+    name: "Hal Greenway",
     image: "/assets/images/hal_greenway.jpg",
     title: "Full Stack Developer",
-    location: "Philadelphia, PA",
+    location: "Orlando, FL",
     experience: "8",
     company: "Apple",
     email: "h.greenway@gmail.com",
@@ -132,7 +132,7 @@ export const MEMBERS = [
   {
     id: 7,
     name: "Aaisha Yang",
-    image: "/assets/images/aaisha_yanf",
+    image: "/assets/images/aaisha_yang.jpg",
     title: "Web Designer",
     location: "Minneapolis, MN",
     experience: "2",
