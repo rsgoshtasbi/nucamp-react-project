@@ -6,7 +6,7 @@ import Table from "react-bootstrap/Table";
 
 function RenderMemberData({ member }) {
   return (
-    
+
         <Table responsive hover borderless>
           <thead>
             <tr>
