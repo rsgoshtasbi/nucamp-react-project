@@ -3,31 +3,6 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 
-function RenderMemberSkills({ member }) {
-  const filterSkills = member.skills.filter(function (person) {
-    return person.skills !== "";
-  });
-  const filteredMemberSkills = filterSkills.map((member) => {
-    return (
-      <div key={member.id}>
-        <h6>Skills</h6>
-        <p>{member.skills.css}</p>
-      </div>
-    );
-  });
-
-  if (filterSkills === true) {
-    return (
-      <>
-        <h5>Skills</h5>
-        {filteredMemberSkills}
-      </>
-    );
-  } else {
-    return <div></div>;
-  }
-}
-
 function RenderMemberModal({ member }) {
   return (
     <>
