@@ -15,14 +15,21 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function CheckboxLabels({ name, label, checked, handleChange }) {
+export default function CheckboxLabels({
+  checkboxName,
+  yearsName,
+  label,
+  checked,
+  handleCheckboxChange,
+  handleSkillChange,
+}) {
   const classes = useStyles();
 
-  const [age, setAge] = React.useState("");
+  // const [age, setAge] = React.useState("");
 
-  const handleChange1 = (event) => {
-    setAge(event.target.value);
-  };
+  // const handleChange1 = (event) => {
+  //   setAge(event.target.value);
+  // };
 
   return (
     <div>
@@ -31,33 +38,20 @@ export default function CheckboxLabels({ name, label, checked, handleChange }) {
           control={
             <Checkbox
               checked={checked}
-              onChange={handleChange}
-              name={name}
+              onChange={handleCheckboxChange}
+              name={checkboxName}
             ></Checkbox>
           }
           label={label}
         />
-        {/* <span className="ml-auto mr-2 mt-1 d-block">
-          <select className="form-control-sm" name="numCampers" id="numCampers">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-        </span> */}
         <FormControl className={classes.formControl}>
           <InputLabel id="demo-simple-select-label">YOE</InputLabel>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
-            value={age}
-            onChange={handleChange1}
+            // value={age}
+            name={yearsName}
+            onChange={handleSkillChange}
           >
             <MenuItem value={1}>1</MenuItem>
             <MenuItem value={2}>2</MenuItem>

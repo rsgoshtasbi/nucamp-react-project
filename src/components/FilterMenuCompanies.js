@@ -3,7 +3,7 @@ import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 
-export default function CheckboxLabels({ name, label, checked, handleChange }) {
+export default function CheckboxLabels({ name, label, checked, handleCheckboxChange }) {
   return (
     <div>
       <FormGroup className="ml-2" row>
@@ -11,7 +11,7 @@ export default function CheckboxLabels({ name, label, checked, handleChange }) {
           control={
             <Checkbox
               checked={checked}
-              onChange={handleChange}
+              onChange={handleCheckboxChange}
               name={name}
             ></Checkbox>
           }

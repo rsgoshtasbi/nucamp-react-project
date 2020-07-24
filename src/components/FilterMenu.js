@@ -6,27 +6,7 @@ import FilterMenuCompanies from "./FilterMenuCompanies";
 import "./css/FilterMenu.css";
 
 export default class FilterMenu extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      htmlCheckbox: false,
-      cssCheckbox: false,
-      bootstrapCheckbox: false,
-      reactCheckbox: false,
-      facebookCheckbox: false,
-      appleCheckbox: false,
-      amazonCheckbox: false,
-      airbnbCheckbox: false,
-      uberCheckbox: false,
-    };
-  }
-
-  handleChange = (event) => {
-    this.setState({ ...this.state, [event.target.name]: event.target.checked });
-  };
-
   render() {
-    console.log(this.props);
     return (
       <div className="filterMenu">
         <h2 className="filterMenuTitle" align="center">
@@ -36,57 +16,53 @@ export default class FilterMenu extends Component {
         <FilterMenuCompanies
           name="facebookCheckbox"
           label="Facebook"
-          checked={this.state.facebookCheckbox}
-          handleChange={this.handleChange}
+          checked={this.props.checkboxState.facebookCheckbox}
+          handleCheckboxChange={this.props.handleCheckboxChange}
         />
         <FilterMenuCompanies
           name="appleCheckbox"
           label="Apple"
-          checked={this.state.appleCheckbox}
-          handleChange={this.handleChange}
+          checked={this.props.checkboxState.appleCheckbox}
+          handleCheckboxChange={this.props.handleCheckboxChange}
         />
         <FilterMenuCompanies
           name="amazonCheckbox"
           label="Amazon"
-          checked={this.state.amazonCheckbox}
-          handleChange={this.handleChange}
-        />
-        <FilterMenuCompanies
-          name="airbnbCheckbox"
-          label="AirBnB"
-          checked={this.state.airbnbCheckbox}
-          handleChange={this.handleChange}
-        />
-        <FilterMenuCompanies
-          name="uberCheckbox"
-          label="Uber"
-          checked={this.state.uberCheckbox}
-          handleChange={this.handleChange}
+          checked={this.props.checkboxState.amazonCheckbox}
+          handleCheckboxChange={this.props.handleCheckboxChange}
         />
         <h4 align="center">Skills</h4>
         <FilterMenuSkills
-          name="htmlCheckbox"
+          checkboxName="htmlCheckbox"
+          yearsName="htmlYears"
           label="HTML"
-          checked={this.state.htmlCheckbox}
-          handleChange={this.handleChange}
+          checked={this.props.checkboxState.htmlCheckbox}
+          handleCheckboxChange={this.props.handleCheckboxChange}
+          handleSkillChange={this.props.handleSkillChange}
         />
         <FilterMenuSkills
-          name="cssCheckbox"
+          checkboxName="cssCheckbox"
+          yearsName="cssYears"
           label="CSS"
-          checked={this.state.cssCheckbox}
-          handleChange={this.handleChange}
+          checked={this.props.checkboxState.cssCheckbox}
+          handleCheckboxChange={this.props.handleCheckboxChange}
+          handleSkillChange={this.props.handleSkillChange}
         />
         <FilterMenuSkills
-          name="bootstrapCheckbox"
+          checkboxName="bootstrapCheckbox"
+          yearsName="bootstrapYears"
           label="Bootstrap"
-          checked={this.state.bootstrapCheckbox}
-          handleChange={this.handleChange}
+          checked={this.props.checkboxState.bootstrapCheckbox}
+          handleCheckboxChange={this.props.handleCheckboxChange}
+          handleSkillChange={this.props.handleSkillChange}
         />
         <FilterMenuSkills
-          name="reactCheckbox"
+          checkboxName="reactCheckbox"
+          yearsName="reactYears"
           label="React"
-          checked={this.state.reactCheckbox}
-          handleChange={this.handleChange}
+          checked={this.props.checkboxState.reactCheckbox}
+          handleCheckboxChange={this.props.handleCheckboxChange}
+          handleSkillChange={this.props.handleSkillChange}
         />
         <Button
           className="btn btn-block mb-2"

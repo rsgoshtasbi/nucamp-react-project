@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PageNotFound from "../assets/images/PageNotFound.jpg";
+import PageNotFound from "./assets/images/PageNotFound.jpg";
 import "./shared.css";
 
 class NotFoundPage extends React.Component {
