@@ -44,35 +44,43 @@ export default class Home extends Component {
   };
 
   filterMembers = () => {
+    return this.state.members.filter((member) => {
+      return (
+        this.filterMemberCompany(member) && this.filterSkillsAndYear(member)
+      );
+    });
+  };
+
+  filterMemberCompany = (member) => {
     if (
       !this.state.facebookCheckbox &&
       !this.state.amazonCheckbox &&
       !this.state.appleCheckbox
     ) {
-      return this.state.members;
-    } else {
-      const temp = this.state.members.filter((member) => {
-        return this.filterMemberCompany(member); // && !this.filterSkillsAndYear(member)
-      });
-      this.setState({ ...this.state, members: temp });
-      return this.state.members;
-    }
-  };
-
-  filterMemberCompany = (member) => {
-    if (
+      console.log(member.company + " kept");
+      return true;
+    } else if (
       (this.state.facebookCheckbox && member.company === "Facebook") ||
       (this.state.amazonCheckbox && member.company === "Amazon") ||
       (this.state.appleCheckbox && member.company === "Apple")
     ) {
+      console.log(member.company + " kept");
       return true;
+    } else {
+      console.log(member.company + " removed");
+      return false;
     }
-
-    return false;
   };
 
   filterSkillsAndYear = (member) => {
     if (
+      !this.state.htmlCheckbox &&
+      !this.state.cssCheckbox &&
+      !this.state.bootstrapCheckbox &&
+      !this.state.reactCheckbox
+    ) {
+      return true;
+    } else if (
       (this.state.htmlCheckbox &&
         member.skills.hasOwnProperty("html") &&
         member.skills.html >= this.state.htmlYears) ||
@@ -106,12 +114,8 @@ export default class Home extends Component {
           <div className="col-md">
             <SearchResults
               member={this.state.members}
-              test={() => this.filterMembers(this.state.members)}
+              filterMembers={this.filterMembers}
             />
-            {/* <SearchResults
-              member={this.filterMembers(this.state.members)}
-              test={console.log(this.filterMembers(this.state.members))}
-            /> */}
           </div>
         </div>
       </div>

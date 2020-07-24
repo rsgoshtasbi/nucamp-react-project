@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
-import RestoreIcon from "@material-ui/icons/Restore";
 import PhoneIcon from "@material-ui/icons/Phone";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";

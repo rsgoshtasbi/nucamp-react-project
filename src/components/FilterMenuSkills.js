@@ -25,12 +25,6 @@ export default function CheckboxLabels({
 }) {
   const classes = useStyles();
 
-  // const [age, setAge] = React.useState("");
-
-  // const handleChange1 = (event) => {
-  //   setAge(event.target.value);
-  // };
-
   return (
     <div>
       <FormGroup className="ml-2" row>
@@ -49,9 +43,9 @@ export default function CheckboxLabels({
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
-            // value={age}
             name={yearsName}
             onChange={handleSkillChange}
+            placeholder="1"
           >
             <MenuItem value={1}>1</MenuItem>
             <MenuItem value={2}>2</MenuItem>

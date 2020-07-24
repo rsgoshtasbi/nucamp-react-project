@@ -32,7 +32,8 @@ function RenderMemberData({ member }) {
 }
 
 function SearchResults(props) {
-  const fbPersonnel = props.member.filter(function (person) {
+  const filteredMembers = props.filterMembers(props.member);
+  const fbPersonnel = filteredMembers.filter(function (person) {
     return person.company === "Facebook";
   });
   const fbResultsRendering = fbPersonnel.map((member) => {
@@ -43,7 +44,7 @@ function SearchResults(props) {
     );
   });
 
-  const applePersonnel = props.member.filter(function (person) {
+  const applePersonnel = filteredMembers.filter(function (person) {
     return person.company === "Apple";
   });
   const appleResultsRendering = applePersonnel.map((member) => {
@@ -54,7 +55,7 @@ function SearchResults(props) {
     );
   });
 
-  const amazonPersonnel = props.member.filter(function (person) {
+  const amazonPersonnel = filteredMembers.filter(function (person) {
     return person.company === "Amazon";
   });
   const amazonResultsRendering = amazonPersonnel.map((member) => {
